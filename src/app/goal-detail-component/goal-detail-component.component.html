@@ -1,0 +1,13 @@
+<p>
+    {{goal.description}}
+</p>
+<p>This goal will be complete in {{goal.completeDate | dateCount }} days</p>
+<button (click)="goalDelete(true)" class="btn btn-outline-danger">Delete Goal</button>
+<!-- we add the paragraph tags with the goal.description inside the cali braces
+to display the descriptions defined in the array in the file, goal.component.ts 
+
+a button is added to enable the child goal-detail-component communicate with its parent,
+goal-component. The communication is that the child deletes a goal once the goal is completed
+
+the button has 'click' as an event bidder, which calls the function/method goalComplete(boolean)
+when the button is clicked.The method is declared in the goal detail component typescript file -->
